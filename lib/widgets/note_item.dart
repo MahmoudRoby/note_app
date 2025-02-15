@@ -26,7 +26,7 @@ class NoteItem extends StatelessWidget {
               child: Text(
                 'Build your career with Omer and Noor',
                 style:
-                    TextStyle(color: Colors.black.withOpacity(.5), fontSize: 18),
+                    TextStyle(color: Colors.black.withOpacity(.5), fontSize: 16),
               ),
             ),
             trailing: IconButton(
@@ -40,7 +40,7 @@ class NoteItem extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 24),
             child: Text(
-              'Feb14, 2013',
+              'Feb 14, 2013',
               style: TextStyle(color: Colors.black.withOpacity(.5), fontSize: 16),
             ),
           )
