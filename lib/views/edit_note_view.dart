@@ -29,7 +29,7 @@ class EditNoteView extends StatelessWidget {
             ),
             CustomTextField(
               hint: 'content',
-              maxLines: 7,
+              maxLines: 6,
             ),
           ],
         ),

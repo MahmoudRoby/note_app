@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:meta/meta.dart';
+
 import 'package:note_app/constants.dart';
 import 'package:note_app/models/note_model.dart';
 
@@ -9,13 +10,13 @@ part 'notes_state.dart';
 class NotesCubit extends Cubit<NotesState> {
   NotesCubit() : super(NotesInitial());
 
+  List<NoteModel>? notes;
+
   fetchNote() {
-    try {
-      var noteBox = Hive.box<NoteModel>(kNotesBox);
-      List<NoteModel> notes = noteBox.values.toList();
-      emit(NotesSucsess(notes));
-    } catch (e) {
-      emit(NotesFaikure(e.toString()));
-    }
+    
+    var noteBox = Hive.box<NoteModel>(kNotesBox);
+    notes = noteBox.values.toList();
+    //emit(NotesSucsess(notes!));
+    
   }
 }
